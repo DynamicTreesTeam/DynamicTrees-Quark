@@ -32,6 +32,10 @@ repositories {
     maven {
         url "https://harleyoconnor.com/maven"
     }
+    maven {
+        name "blamejared"
+        url "https://maven.blamejared.com/"
+    }
     flatDir {
         dirs("libs")
     }
@@ -124,10 +128,12 @@ dependencies {
     // Not sure if we need this one, what is a "forge" anyway?
     minecraft "net.minecraftforge:forge:${mcVersion}-${property("forgeVersion")}"
 
-    // Compile Hwyla API, but don't include in runtime.
-    compileOnly fg.deobf("mcp.mobius.waila:Hwyla:${property("hwylaVersion")}:api")
-    // At runtime, use the full Hwyla mod.
-    runtimeOnly fg.deobf("mcp.mobius.waila:Hwyla:${property("hwylaVersion")}")
+    // Temp as TehNut Maven is down.
+    implementation(fg.deobf("curse.maven:hwyla-253449:3033593"))
+//    // Compile Hwyla API, but don't include in runtime.
+//    compileOnly fg.deobf("mcp.mobius.waila:Hwyla:${property("hwylaVersion")}:api")
+//    // At runtime, use the full Hwyla mod.
+//    runtimeOnly fg.deobf("mcp.mobius.waila:Hwyla:${property("hwylaVersion")}")
 
     // Compile JEI API, but don't include in runtime.
     compileOnly fg.deobf("mezz.jei:jei-${mcVersion}:${property("jeiVersion")}:api")
@@ -142,8 +148,8 @@ dependencies {
     // Compile Dynamic Trees Plus
     runtimeOnly fg.deobf("com.ferreusveritas.dynamictreesplus:DynamicTreesPlus-${mcVersion}:${property("dynamicTreesPlusVersion")}")
 
-    implementation fg.deobf("curse.maven:autoreglib-250363:3326041")
-    implementation fg.deobf("curse.maven:quark-243121:3538744")
+    implementation fg.deobf("vazkii.autoreglib:AutoRegLib:${property("arlVersion")}")
+    implementation fg.deobf("vazkii.quark:Quark:${property("quarkVersion")}")
 
     runtimeOnly fg.deobf("curse.maven:cc-tweaked-282001:3236650")
 

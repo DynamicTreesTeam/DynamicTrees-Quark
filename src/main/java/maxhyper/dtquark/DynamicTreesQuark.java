@@ -46,7 +46,6 @@ public class DynamicTreesQuark
     }
 
     public void gatherData(final GatherDataEvent event) {
-        Resources.MANAGER.gatherData();
         GatherDataHelper.gatherAllData(
                 MOD_ID,
                 event,
