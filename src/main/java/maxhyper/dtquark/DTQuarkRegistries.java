@@ -1,6 +1,7 @@
 package maxhyper.dtquark;
 
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
+import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors;
 import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.util.CommonVoxelShapes;
@@ -13,8 +14,9 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Set;
+import javax.annotation.Nonnull;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DTQuarkRegistries {
@@ -35,8 +37,8 @@ public class DTQuarkRegistries {
 
     public static final FeatureCanceller MUSHROOM_CANCELLER = new MushroomFeatureCanceller<>(DynamicTreesQuark.location("mushroom"), HugeMushroomFeatureConfiguration.class) {
         @Override
-        public boolean shouldCancel(ConfiguredFeature<?, ?> configuredFeature, Set<String> namespaces) {
-            final ResourceLocation featureName = configuredFeature.feature().getRegistryName();
+        public boolean shouldCancel(ConfiguredFeature<?, ?> configuredFeature, @Nonnull BiomePropertySelectors.NormalFeatureCancellation featureCancellations) {
+            final ResourceLocation featureName = ForgeRegistries.FEATURES.getKey(configuredFeature.feature());
 
             if (featureName == null) return false;
 

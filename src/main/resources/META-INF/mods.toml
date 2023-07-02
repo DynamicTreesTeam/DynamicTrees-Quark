@@ -1,15 +1,15 @@
-modLoader="javafml"
-loaderVersion="[40,41)"
-license="MIT"
-issueTrackerURL="https://github.com/DynamicTreesTeam/DynamicTrees-Quark/issues"
+modLoader = "javafml"
+loaderVersion = "[41,)"
+license = "MIT"
+issueTrackerURL = "https://github.com/DynamicTreesTeam/DynamicTrees-Quark/issues"
 
 [[mods]]
-modId="dtquark"
-version="${file.jarVersion}"
-displayName="Dynamic Trees for Quark"
+modId = "dtquark"
+version = "${file.jarVersion}"
+displayName = "Dynamic Trees for Quark"
 
-updateJSONURL="https://github.com/DynamicTreesTeam/DynamicTreesVersionInfo/blob/master/Add-ons/Quark.json?raw=true"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-quark"
+updateJSONURL = "https://github.com/DynamicTreesTeam/DynamicTreesVersionInfo/blob/master/Add-ons/Quark.json?raw=true"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-quark"
 
 authors="Max Hyper" #optional
 description='''
@@ -17,39 +17,39 @@ Compatibility Mod between Dynamic trees and Quark
 '''
 
 [[dependencies.dtquark]]
-    modId="forge"
-    mandatory=true
-    versionRange="[40,41)"
-    ordering="NONE"
-    side="BOTH"
+modId = "forge"
+mandatory = true
+versionRange = "[41,)"
+ordering = "NONE"
+side = "BOTH"
 
 [[dependencies.dtquark]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.18.2,1.19)"
-    ordering="NONE"
-    side="BOTH"
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19,1.20)"
+ordering = "NONE"
+side = "BOTH"
 
 [[dependencies.dtquark]]
-    modId="dynamictrees"
-    mandatory=true
-    versionRange="[0.11.0,)"
-    ordering="AFTER"
-    side="BOTH"
+modId = "dynamictrees"
+mandatory = true
+versionRange = "[1.1.0-BETA1,)"
+ordering = "AFTER"
+side = "BOTH"
 
 [[dependencies.dtquark]]
-    modId="dynamictreesplus"
-    mandatory=false
-    versionRange="[0.1.0,)"
-    ordering="AFTER"
-    side="BOTH"
+modId = "dynamictreesplus"
+mandatory = false
+versionRange = "[1.1.0,)"
+ordering = "AFTER"
+side = "BOTH"
 
 [[dependencies.dtquark]]
-    modId="quark"
-    mandatory=true
-    versionRange="[r2.4-312,)"
-    ordering="AFTER"
-    side="BOTH"
+modId = "quark"
+mandatory = true
+versionRange = "[r3.4-385,)"
+ordering = "AFTER"
+side = "BOTH"
 
 #This is important to prevent ecologics' plain biome replacement from replacing blossom tree generation
 [[dependencies.dtquark]]

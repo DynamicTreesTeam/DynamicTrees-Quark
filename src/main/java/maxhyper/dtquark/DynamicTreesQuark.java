@@ -8,12 +8,12 @@ import com.ferreusveritas.dynamictrees.tree.family.Family;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import vazkii.quark.base.module.config.type.CompoundBiomeConfig;
 import vazkii.quark.content.world.config.BlossomTreeConfig;
 import vazkii.quark.content.world.module.BlossomTreesModule;
@@ -43,7 +43,7 @@ public class DynamicTreesQuark {
         DTQuarkRegistries.setup();
 
         for (BlossomTreeConfig config : BlossomTreesModule.trees.values()) {
-            config.biomeConfig = CompoundBiomeConfig.fromBiomeTypes(false);
+            config.biomeConfig = CompoundBiomeConfig.fromBiomeTags(false);
         }
     }
 
