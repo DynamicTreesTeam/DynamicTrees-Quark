@@ -1,8 +1,0 @@
-{
-  "parent": "dtquark:block/glow_shroom",
-  "textures": {
-    "particle": "dtquark:block/glow_shroom_cap",
-    "stem": "dtquark:block/glow_shroom_cap",
-    "cap": "dtquark:block/glow_shroom_cap"
-  }
-}

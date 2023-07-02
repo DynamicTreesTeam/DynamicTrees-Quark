@@ -15,22 +15,25 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "conditions": [
+          "name": "quark:glow_shroom_stem"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "enchantments": [
-                  {
-                    "enchantment": "minecraft:silk_touch",
-                    "levels": {
-                      "min": 1
-                    }
-                  }
-                ]
-              }
+              "function": "dynamictrees:multiply_sticks_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "quark:glow_shroom_stem"
+          "name": "minecraft:stick"
         }
       ]
     }
