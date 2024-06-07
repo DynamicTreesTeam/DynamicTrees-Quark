@@ -1,11 +1,10 @@
 {
   "values": [
-    "dtquark:warm_blossom_sapling",
-    "dtquark:ancient_sapling",
-    "dtquark:frosty_blossom_sapling",
-    "dtquark:sweet_blossom_sapling",
-    "dtquark:fiery_blossom_sapling",
-    "dtquark:sunny_blossom_sapling",
-    "dtquark:serene_blossom_sapling"
+    "dtquark:warm_trumpet_sapling",
+    "dtquark:ashen_sapling",
+    "dtquark:frosty_trumpet_sapling",
+    "dtquark:fiery_trumpet_sapling",
+    "dtquark:sunny_trumpet_sapling",
+    "dtquark:serene_trumpet_sapling"
   ]
 }

@@ -19,8 +19,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import vazkii.quark.base.module.config.type.CompoundBiomeConfig;
-import vazkii.quark.content.world.config.BlossomTreeConfig;
-import vazkii.quark.content.world.module.BlossomTreesModule;
+import vazkii.quark.content.world.config.TrumpetTreeConfig;
+import vazkii.quark.content.world.module.TrumpetTreesModule;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DynamicTreesQuark.MOD_ID)
@@ -52,7 +52,7 @@ public class DynamicTreesQuark {
     private void commonSetup(final FMLCommonSetupEvent event) {
         DTQuarkRegistries.setup();
 
-        for (BlossomTreeConfig config : BlossomTreesModule.trees.values()) {
+        for (TrumpetTreeConfig config : TrumpetTreesModule.trees.values()) {
             config.biomeConfig = CompoundBiomeConfig.fromBiomeTags(false);
         }
     }

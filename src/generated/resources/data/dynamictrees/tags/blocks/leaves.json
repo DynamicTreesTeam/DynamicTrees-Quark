@@ -1,11 +1,10 @@
 {
   "values": [
-    "dtquark:warm_blossom_leaves",
-    "dtquark:ancient_leaves",
-    "dtquark:frosty_blossom_leaves",
-    "dtquark:sweet_blossom_leaves",
-    "dtquark:fiery_blossom_leaves",
-    "dtquark:sunny_blossom_leaves",
-    "dtquark:serene_blossom_leaves"
+    "dtquark:warm_trumpet_leaves",
+    "dtquark:ashen_leaves",
+    "dtquark:frosty_trumpet_leaves",
+    "dtquark:fiery_trumpet_leaves",
+    "dtquark:sunny_trumpet_leaves",
+    "dtquark:serene_trumpet_leaves"
   ]
 }

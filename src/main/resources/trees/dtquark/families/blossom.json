@@ -1,8 +1,0 @@
-{
-  "common_leaves": "dtquark:sweet_blossom",
-  "common_species": "dtquark:sweet_blossom",
-  "primitive_log": "quark:blossom_log",
-  "primitive_stripped_log": "quark:stripped_blossom_log",
-  "stick": "stick",
-  "max_branch_radius": 8
-}

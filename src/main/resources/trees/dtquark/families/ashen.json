@@ -1,0 +1,7 @@
+{
+  "common_leaves": "dtquark:ashen",
+  "common_species": "dtquark:ashen",
+  "primitive_log": "quark:ashen_log",
+  "primitive_stripped_log": "quark:stripped_ashen_log",
+  "max_branch_radius": 8
+}

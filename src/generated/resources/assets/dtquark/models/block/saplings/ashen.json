@@ -1,0 +1,9 @@
+{
+  "parent": "dynamictrees:block/smartmodel/sapling",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "leaves": "quark:block/ashen_leaves",
+    "log": "quark:block/ashen_log",
+    "particle": "quark:block/ashen_leaves"
+  }
+}

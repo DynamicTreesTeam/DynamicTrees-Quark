@@ -16,11 +16,11 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nonnull;
 
-public class BlossomLeavesProperties extends LeavesProperties {
+public class TrumpetLeafProperties extends LeavesProperties {
 
-    public static final TypedRegistry.EntryType<LeavesProperties> TYPE = TypedRegistry.newType(BlossomLeavesProperties::new);
+    public static final TypedRegistry.EntryType<LeavesProperties> TYPE = TypedRegistry.newType(TrumpetLeafProperties::new);
 
-    public BlossomLeavesProperties(ResourceLocation registryName) {
+    public TrumpetLeafProperties(ResourceLocation registryName) {
         super(registryName);
     }
 

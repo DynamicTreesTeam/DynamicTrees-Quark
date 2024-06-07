@@ -1,0 +1,7 @@
+{
+  "loader": "dynamictrees:branch",
+  "textures": {
+    "bark": "quark:block/trumpet_log",
+    "rings": "quark:block/trumpet_log_top"
+  }
+}

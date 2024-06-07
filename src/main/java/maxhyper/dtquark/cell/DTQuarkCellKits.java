@@ -20,13 +20,13 @@ public class DTQuarkCellKits {
 
         private final Cell[] leafCells = {
                 CellNull.NULL_CELL,
-                new AncientLeafCell(1),
-                new AncientLeafCell(2),
-                new AncientLeafCell(3),
-                new AncientLeafCell(4),
-                new AncientLeafCell(5),
-                new AncientLeafCell(6),
-                new AncientLeafCell(7)
+                new AshenLeafCell(1),
+                new AshenLeafCell(2),
+                new AshenLeafCell(3),
+                new AshenLeafCell(4),
+                new AshenLeafCell(5),
+                new AshenLeafCell(6),
+                new AshenLeafCell(7)
         };
 
         private final com.ferreusveritas.dynamictrees.cell.CellKits.BasicSolver solver = new com.ferreusveritas.dynamictrees.cell.CellKits.BasicSolver(new short[]{0x0514, 0x0413, 0x0312, 0x0211});
@@ -49,7 +49,7 @@ public class DTQuarkCellKits {
 
         @Override
         public SimpleVoxmap getLeafCluster() {
-            return AncientLeafCell.LEAF_CLUSTER;
+            return AshenLeafCell.LEAF_CLUSTER;
         }
 
         @Override
@@ -65,7 +65,7 @@ public class DTQuarkCellKits {
     };
 
     public static void register(Registry<CellKit> registry) {
-        registry.register(ANCIENT);
+        registry.register(ASHEN);
     }
 
 }

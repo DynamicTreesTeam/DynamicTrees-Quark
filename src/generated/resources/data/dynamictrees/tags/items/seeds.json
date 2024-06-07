@@ -1,11 +1,10 @@
 {
   "values": [
-    "dtquark:warm_blossom_seed",
-    "dtquark:ancient_seed",
-    "dtquark:frosty_blossom_seed",
-    "dtquark:sweet_blossom_seed",
-    "dtquark:fiery_blossom_seed",
-    "dtquark:sunny_blossom_seed",
-    "dtquark:serene_blossom_seed"
+    "dtquark:warm_trumpet_seed",
+    "dtquark:ashen_seed",
+    "dtquark:frosty_trumpet_seed",
+    "dtquark:fiery_trumpet_seed",
+    "dtquark:sunny_trumpet_seed",
+    "dtquark:serene_trumpet_seed"
   ]
 }

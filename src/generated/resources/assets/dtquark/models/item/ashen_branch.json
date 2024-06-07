@@ -1,0 +1,7 @@
+{
+  "parent": "dynamictrees:item/branch",
+  "textures": {
+    "bark": "quark:block/ashen_log",
+    "rings": "quark:block/ashen_log_top"
+  }
+}

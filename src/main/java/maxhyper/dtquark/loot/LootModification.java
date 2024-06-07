@@ -12,26 +12,26 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import vazkii.quark.base.handler.MiscUtil;
-import vazkii.quark.content.world.module.AncientWoodModule;
+import vazkii.quark.content.world.module.AshenWoodModule;
 
 @Mod.EventBusSubscriber(modid = DynamicTreesQuark.MOD_ID)
 public class LootModification {
 
-    private static final LazyValue<Item> ANCIENT_SEED = LazyValue.supplied(
-            () -> ForgeRegistries.ITEMS.getValue(DynamicTreesQuark.location("ancient_seed"))
+    private static final LazyValue<Item> ASHEN_SEED = LazyValue.supplied(
+            () -> ForgeRegistries.ITEMS.getValue(DynamicTreesQuark.location("ashen_seed"))
     );
 
     @SubscribeEvent
     public static void loadLootTable(LootTableLoadEvent event) {
         int weight = 0;
         if (event.getName().equals(BuiltInLootTables.ANCIENT_CITY)) {
-            weight = DTQuarkConfig.ANCIENT_SEED_LOOT_WEIGHT.get();
+            weight = DTQuarkConfig.ASHEN_SEED_LOOT_WEIGHT.get();
         }
 
         if (weight > 0) {
-            LootPoolEntryContainer entry = LootItem.lootTableItem(ANCIENT_SEED.get())
+            LootPoolEntryContainer entry = LootItem.lootTableItem(ASHEN_SEED.get())
                     .setWeight(weight)
-                    .setQuality(AncientWoodModule.ancientCityLootQuality)
+                    .setQuality(AshenWoodModule.ancientCityLootQuality)
                     .build();
             MiscUtil.addToLootTable(event.getTable(), entry);
         }

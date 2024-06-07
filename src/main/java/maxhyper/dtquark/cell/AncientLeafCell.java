@@ -4,7 +4,7 @@ import com.ferreusveritas.dynamictrees.cell.MatrixCell;
 import com.ferreusveritas.dynamictrees.util.SimpleVoxmap;
 import net.minecraft.core.BlockPos;
 
-public class AncientLeafCell extends MatrixCell {
+public class AshenLeafCell extends MatrixCell {
 
     public static final SimpleVoxmap LEAF_CLUSTER = new SimpleVoxmap(5, 3, 5, new byte[]{
 
@@ -40,7 +40,7 @@ public class AncientLeafCell extends MatrixCell {
             0, 1, 2, 0, 2, 0, 0, 0  //E Maps 3 -> 0, 4 -> 2, * -> *
     };
 
-    public AncientLeafCell(int value) {
+    public AshenLeafCell(int value) {
         super(value, VAL_MAP);
     }
 

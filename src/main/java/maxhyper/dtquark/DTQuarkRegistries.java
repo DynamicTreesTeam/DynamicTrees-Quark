@@ -29,7 +29,7 @@ public class DTQuarkRegistries {
 
     @SubscribeEvent
     public static void registerLeavesPropertiesTypes(final TypeRegistryEvent<LeavesProperties> event) {
-        event.registerType(new ResourceLocation(DynamicTreesQuark.MOD_ID, "blossom"), BlossomLeavesProperties.TYPE);
+        event.registerType(new ResourceLocation(DynamicTreesQuark.MOD_ID, "trumpet"), TrumpetLeafProperties.TYPE);
     }
 
     @SubscribeEvent

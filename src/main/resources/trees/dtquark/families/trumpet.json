@@ -1,0 +1,8 @@
+{
+  "common_leaves": "dtquark:trumpet",
+  "common_species": "dtquark:trumpet",
+  "primitive_log": "quark:trumpet_log",
+  "primitive_stripped_log": "quark:stripped_trumpet_log",
+  "stick": "stick",
+  "max_branch_radius": 8
+}
