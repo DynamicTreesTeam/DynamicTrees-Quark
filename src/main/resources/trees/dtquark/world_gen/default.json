@@ -36,18 +36,6 @@
     }
   },
   {
-    "select": { "tag": "#minecraft:is_mountain" },
-    "apply": {
-      "species" : {
-        "method" : "splice_before",
-        "random" : {
-          "dtquark:sweet_blossom" : 1,
-          "..." : 75
-        }
-      }
-    }
-  },
-  {
     "select": { "tag" : "#forge:is_plains" },
     "apply": {
       "species" : {
