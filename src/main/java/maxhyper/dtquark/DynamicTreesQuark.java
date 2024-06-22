@@ -18,9 +18,9 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import vazkii.quark.base.module.config.type.CompoundBiomeConfig;
-import vazkii.quark.content.world.config.BlossomTreeConfig;
-import vazkii.quark.content.world.module.BlossomTreesModule;
+import org.violetmoon.zeta.config.type.CompoundBiomeConfig;
+import org.violetmoon.quark.content.world.config.BlossomTreeConfig;
+import org.violetmoon.quark.content.world.module.BlossomTreesModule;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DynamicTreesQuark.MOD_ID)
@@ -51,11 +51,12 @@ public class DynamicTreesQuark {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         DTQuarkRegistries.setup();
-
-        for (BlossomTreeConfig config : BlossomTreesModule.trees.values()) {
-            config.biomeConfig = CompoundBiomeConfig.fromBiomeTags(false);
+    
+        for (BlossomTreesModule.BlossomTree tree : BlossomTreesModule.blossomTrees) {
+            tree.quarkConfig.biomeConfig = CompoundBiomeConfig.fromBiomeTags(false);
         }
     }
+    
 
     private void gatherData(final GatherDataEvent event) {
         GatherDataHelper.gatherAllData(MOD_ID, event,

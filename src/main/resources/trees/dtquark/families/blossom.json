@@ -1,6 +1,6 @@
 {
-  "common_leaves": "dtquark:sweet_blossom",
-  "common_species": "dtquark:sweet_blossom",
+  "common_leaves": "dtquark:sunny_blossom_leaves",
+  "common_species": "dtquark:sunny_blossom",
   "primitive_log": "quark:blossom_log",
   "primitive_stripped_log": "quark:stripped_blossom_log",
   "stick": "stick",
