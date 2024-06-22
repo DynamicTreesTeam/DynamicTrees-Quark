@@ -1,0 +1,2 @@
+- Change Sniffer Ancient sapling to Ancient pit
+- Add Ancient Fruit to the ancient Tree
