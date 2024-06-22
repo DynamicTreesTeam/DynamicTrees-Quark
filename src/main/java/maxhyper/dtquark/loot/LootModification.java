@@ -11,8 +11,8 @@ import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
-import vazkii.quark.base.handler.MiscUtil;
-import vazkii.quark.content.world.module.AncientWoodModule;
+import org.violetmoon.zeta.event.play.loading.ZLootTableLoad;
+import org.violetmoon.quark.content.world.module.AncientWoodModule;
 
 @Mod.EventBusSubscriber(modid = DynamicTreesQuark.MOD_ID)
 public class LootModification {
@@ -33,7 +33,10 @@ public class LootModification {
                     .setWeight(weight)
                     .setQuality(AncientWoodModule.ancientCityLootQuality)
                     .build();
-            MiscUtil.addToLootTable(event.getTable(), entry);
+            if (event instanceof ZLootTableLoad) {
+                ZLootTableLoad zLootTableLoadEvent = (ZLootTableLoad) event;
+                zLootTableLoadEvent.add(entry);
+            }
         }
     }
 
