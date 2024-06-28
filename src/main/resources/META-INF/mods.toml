@@ -10,7 +10,7 @@ displayName = "Dynamic Trees for Quark"
 
 updateJSONURL = "https://github.com/DynamicTreesTeam/DynamicTreesVersionInfo/blob/master/Add-ons/Quark.json?raw=true"
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/dynamic-trees-quark"
-
+credits="GroupiX05"
 authors="Max Hyper" #optional
 description='''
 Compatibility Mod between Dynamic trees and Quark
