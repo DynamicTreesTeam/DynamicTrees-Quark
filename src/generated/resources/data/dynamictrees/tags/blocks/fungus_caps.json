@@ -1,5 +1,8 @@
 {
   "values": [
-    "dtquark:glow_shroom_sapling"
+    {
+      "id": "dtquark:glow_shroom_sapling",
+      "required": false
+    }
   ]
 }
