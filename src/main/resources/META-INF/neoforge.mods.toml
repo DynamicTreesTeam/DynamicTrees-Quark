@@ -8,7 +8,7 @@ modId="dtquark"
 version="${file.jarVersion}"
 displayName="Dynamic Trees for Quark"
 logoFile="dtquark_logo.png"
-authors="Max Hyper, Violet Moon"
+authors="supermassimo, Max Hyper"
 description='''
 Compatibility Mod between Dynamic Trees and Quark for NeoForge 1.21.1
 '''

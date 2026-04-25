@@ -66,33 +66,6 @@
   },
 
   {
-    "_comment": "Ashen — #minecraft:is_forest. Quark itself doesn't spawn ancient_tree naturally; kept rare.",
-    "select": { "tag" : "#minecraft:is_forest" },
-    "apply": {
-      "species" : {
-        "method" : "splice_before",
-        "random" : {
-          "dtquark:ancient" : 1,
-          "..." : 480
-        }
-      }
-    }
-  },
-  {
-    "_comment": "Ashen — #c:is_dense secondary placement.",
-    "select": { "tag" : "#c:is_dense" },
-    "apply": {
-      "species" : {
-        "method" : "splice_before",
-        "random" : {
-          "dtquark:ancient" : 1,
-          "..." : 600
-        }
-      }
-    }
-  },
-
-  {
     "only_if_loaded": "dynamictreesplus",
     "select": { "name": "quark:glimmering_weald" },
     "apply": {
@@ -447,79 +420,6 @@
     "select": { "name": "terralith:lush_desert" },
     "apply": {
       "species": { "method": "splice_before", "random": { "dtquark:fiery_blossom": 1, "...": 50 } }
-    }
-  },
-
-  {
-    "_comment": "Ashen in Terralith forest/dense/enchanted biomes (scaled 1.5× of prior).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:cloud_forest" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 480 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:forested_highlands" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 480 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:rocky_jungle" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 600 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:jungle_mountains" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 600 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:temperate_highlands" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 600 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:birch_taiga" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 600 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:yellowstone" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 600 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:amethyst_rainforest" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 720 } }
-    }
-  },
-  {
-    "_comment": "Ashen in mirage_isles — slightly more common (enchanted theme fit).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:mirage_isles" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 240 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:tropical_jungle" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:ancient": 1, "...": 900 } }
     }
   }
 ]
