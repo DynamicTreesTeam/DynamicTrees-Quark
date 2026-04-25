@@ -1,0 +1,7 @@
+{
+  "_comment": "Attaches dtquark:lush_caves_azalea (a Java Feature that places adult dtquark:azalea trees on cave-floor moss inside lush_caves) to the minecraft:lush_caves biome at the VEGETAL_DECORATION generation stage. We deliberately bypass DT's BiomeDatabase populator system (any modification to it triggers a Species.reset() corruption channel that zeros soilTypeFlags and breaks bonemeal globally — empirically confirmed in two separate test cycles). Using a NeoForge biome_modifier scoped to a single biome keeps the side-effect surface minimal: this is purely additive to vanilla worldgen and never touches DT's species reload pipeline.",
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:lush_caves",
+  "features": "dtquark:lush_caves_azalea",
+  "step": "vegetal_decoration"
+}

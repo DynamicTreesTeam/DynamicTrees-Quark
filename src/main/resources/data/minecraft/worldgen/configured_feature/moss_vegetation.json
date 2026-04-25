@@ -1,0 +1,38 @@
+{
+  "_comment": "Override vanilla minecraft:moss_vegetation. Original weights: azalea 7, flowering_azalea 4, moss_carpet 25, short_grass 50, tall_grass 10 (total 96). We swap both azalea bushes for dtquark:azalea_sapling at the SAME total weight (11) — previous attempt at weight 40 broke bonemealing DT azalea trees: minecraft:moss_patch_bonemeal (fired when a moss_block under/near a DT azalea is bonemealed) uses this feature, and a too-high sapling weight caused saplings to place on top of DT trunk/branch blocks, overwriting and destroying the tree. Keeping weight at 11 preserves vanilla-equivalent sapling density while still replacing vanilla azalea bushes with DT saplings. The simple_block feature does NOT fire BlockEvent.EntityPlaceEvent during worldgen (DT 1.6.0 VanillaSaplingEventHandler.SAPLING_REPLACERS only triggers on EntityPlaceEvent + BlockGrowFeatureEvent), so DT's primitive_sapling substitution cannot intercept these blocks at gen time — datapack override is the only JSON-side solution. Consolidated into one entry to match the 4+7=11 original total.",
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "dtquark:azalea_sapling"
+          },
+          "weight": 11
+        },
+        {
+          "data": {
+            "Name": "minecraft:moss_carpet"
+          },
+          "weight": 25
+        },
+        {
+          "data": {
+            "Name": "minecraft:short_grass"
+          },
+          "weight": 50
+        },
+        {
+          "data": {
+            "Name": "minecraft:tall_grass",
+            "Properties": {
+              "half": "lower"
+            }
+          },
+          "weight": 10
+        }
+      ]
+    }
+  }
+}

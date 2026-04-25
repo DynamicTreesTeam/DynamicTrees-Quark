@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "dtquark:ancient_branch",
+    "dtquark:azalea_branch",
+    "dtquark:blossom_branch",
+    "dtquark:stripped_ancient_branch",
+    "dtquark:stripped_azalea_branch",
+    "dtquark:stripped_blossom_branch"
+  ]
+}

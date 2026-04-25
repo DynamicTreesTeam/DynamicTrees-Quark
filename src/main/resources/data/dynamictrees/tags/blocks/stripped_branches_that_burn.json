@@ -1,0 +1,9 @@
+{
+  "_comment": "1.20-style duplicate of tags/block/stripped_branches_that_burn.json. Kept as a paranoia fallback for older NeoForge versions; 1.21+ reads only tags/block/ (singular).",
+  "replace": false,
+  "values": [
+    "dtquark:stripped_ancient_branch",
+    "dtquark:stripped_azalea_branch",
+    "dtquark:stripped_blossom_branch"
+  ]
+}

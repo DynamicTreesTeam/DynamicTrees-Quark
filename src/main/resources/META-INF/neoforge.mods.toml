@@ -40,3 +40,33 @@ Compatibility Mod between Dynamic Trees and Quark for NeoForge 1.21.1
     versionRange="[4.1,)"
     ordering="AFTER"
     side="BOTH"
+
+# Optional: load AFTER Dynamic Trees Plus so our entries can splice into DT+ cactus/fungus
+# species chains (e.g. glimmering_weald's glow_shroom) without being overwritten.
+[[dependencies.dtquark]]
+    modId="dynamictreesplus"
+    mandatory=false
+    versionRange="[1.3,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Optional: load AFTER Dynamic Trees for Terralith so our splice_before entries on
+# terralith:* biomes (blooming_valley, lush_valley, lush_desert, etc.) process AFTER
+# DTTerralith's REPLACE operations. Without this, DTTerralith may wipe our
+# dtquark:azalea additions from those biomes. See BiomePopulatorsResourceLoader —
+# load order determines whether splice_before sees the prior chain or an empty one.
+[[dependencies.dtquark]]
+    modId="dtterralith"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# Optional: load AFTER Terralith itself so any Terralith-provided tree pack data
+# is registered before ours.
+[[dependencies.dtquark]]
+    modId="terralith"
+    mandatory=false
+    versionRange="[2.0,)"
+    ordering="AFTER"
+    side="BOTH"

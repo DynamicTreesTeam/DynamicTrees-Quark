@@ -10,6 +10,7 @@ import com.dtteam.dynamictrees.tree.species.Species;
 import com.dtteam.dynamictreesplus.block.mushroom.CapProperties;
 import com.dtteam.dynamictrees.registry.NeoForgeRegistryHandler;
 import maxhyper.dtquark.loot.LootModifiers;
+import maxhyper.dtquark.worldgen.DTQuarkFeatures;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -40,6 +41,7 @@ public class DynamicTreesQuark {
 
 
         LootModifiers.register(modEventBus);
+        DTQuarkFeatures.register(modEventBus);
 
         NeoForgeRegistryHandler.setup(MOD_ID, modEventBus);
         DTQuarkRegistries.setup();
@@ -50,8 +52,7 @@ public class DynamicTreesQuark {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // DTQuarkRegistries.setup(); // Removed this line as per instruction
-    
+        // Disable Quark's native blossom spawning so dtquark trees don't compete.
         for (BlossomTreesModule.BlossomTree tree : BlossomTreesModule.blossomTrees) {
             tree.quarkConfig.biomeConfig = CompoundBiomeConfig.fromBiomeTags(false);
         }
