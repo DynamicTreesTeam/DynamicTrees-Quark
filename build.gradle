@@ -65,18 +65,9 @@ neoForge {
 }
 
 dependencies {
-    // NeoForge provided by plugin
-
-    // Quark 4.1-473 (CurseMaven)
     implementation "curse.maven:quark-243121:7625365"
-
-    // Zeta 1.1-38 (CurseMaven)
     implementation "curse.maven:zeta-968868:7625372"
-
-    // Dynamic Trees 1.6.0 (CurseMaven) — DT+ 1.3.1 requires >=1.6.0
     implementation "curse.maven:dynamictrees-252818:7513464"
-
-    // Dynamic Trees Plus 1.3.1 (CurseMaven)
     implementation "curse.maven:dynamictreesplus-478155:7513822"
 }
 
@@ -85,10 +76,5 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 processResources {
-    // Both src/main/resources and src/generated/resources are registered as resource srcDirs.
-    // Some paths (e.g. ancient_fruit blockstate, glow_shroom models, DT tags) legitimately live in
-    // both trees — hand-authored in main/resources, re-emitted by datagen into generated/resources.
-    // EXCLUDE keeps the first occurrence (main/resources, declared first) and drops subsequent
-    // duplicates from generated/resources, matching the reference build's strategy.
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

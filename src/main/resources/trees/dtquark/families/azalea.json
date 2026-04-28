@@ -4,8 +4,7 @@
   "primitive_log": "quark:azalea_log",
   "primitive_stripped_log": "quark:stripped_azalea_log",
   "max_branch_radius": 8,
-  "_comment_loot_volume_multiplier": "Boosts log drops; calibrated empirically.",
-  "loot_volume_multiplier": 2.0,
+  "loot_volume_multiplier": 2.5,
   "texture_overrides": {
     "branch": "quark:block/azalea_log",
     "branch_top": "quark:block/azalea_log_top",

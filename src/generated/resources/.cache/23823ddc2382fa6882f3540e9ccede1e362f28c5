@@ -1,10 +1,9 @@
-// 1.21.1	2026-04-28T14:48:09.124506417	Block States: dtquark
+// 1.21.1	2026-04-28T16:09:09.086544103	Block States: dtquark
 0f926cd59a8636cf012c456baefb7475813c867e assets/dtquark/blockstates/ancient_branch.json
 5909b67c7c522934f53b571c47e7831ae6ae029b assets/dtquark/blockstates/ancient_leaves.json
 6a1434881c6aabee16ba8c87ff94063e092ef94b assets/dtquark/blockstates/ancient_sapling.json
 5b779ffbf3cbee8c0c1d46a431f7b2563a40f63e assets/dtquark/blockstates/azalea_branch.json
 5a49eaf2e8e03519cd1c8bb9acc727119658c60e assets/dtquark/blockstates/azalea_leaves.json
-e5fc160e33782c98ee8357bda223dc219185a379 assets/dtquark/blockstates/azalea_sapling.json
 a8dd386807ed552ed30294cd6fafae1ca13cb716 assets/dtquark/blockstates/blossom_branch.json
 83b426bc17ece3cf9afaab0a6b732d9d8bd9a014 assets/dtquark/blockstates/fiery_blossom_leaves.json
 de6201539c735c5564b9bc0a865964df52195650 assets/dtquark/blockstates/fiery_blossom_sapling.json
@@ -30,7 +29,6 @@ edf6f4582b53e6a2e3e53b815ba5cbd33b22409e assets/dtquark/models/block/blossom_bra
 db1f55492f167548b52b9d9aca4185c179420c2e assets/dtquark/models/block/glow_shroom_branch.json
 2e176189daaa64ff6d32f061eace9b610220252e assets/dtquark/models/block/mushroom/glow_shroom_cap_center_age0.json
 a7ece6731f5c303a39fb0d01cd3e4fb9c8d62047 assets/dtquark/models/block/saplings/ancient.json
-6962b87d49d51d9271ae6e224ec8c74afcb2b3b3 assets/dtquark/models/block/saplings/azalea.json
 065b197b5a5e2e6a14d5a53b37742f09f796e557 assets/dtquark/models/block/saplings/fiery_blossom.json
 ab94b9cf6d1b9371ae651e3c221db905deb7f9c3 assets/dtquark/models/block/saplings/frosty_blossom.json
 60b2d8a2b48f447b35ddf071c35a1a4b9236c76d assets/dtquark/models/block/saplings/glow_shroom.json

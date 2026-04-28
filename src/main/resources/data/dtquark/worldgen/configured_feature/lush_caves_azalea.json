@@ -1,5 +1,0 @@
-{
-  "_comment": "Wraps maxhyper.dtquark.worldgen.LushCavesAzaleaFeature (registered as dtquark:lush_caves_azalea via DTQuarkFeatures DeferredRegister). The feature uses NoneFeatureConfiguration so config is empty. The Java side internally walks SubterraneanGroundFinder layers and calls Species.generate on dtquark:azalea — bypassing DT's BiomeDatabase populator entirely so adult azaleas appear inside lush_caves without poking the populator path that triggers Species.reset() and breaks bonemeal globally.",
-  "type": "dtquark:lush_caves_azalea",
-  "config": {}
-}

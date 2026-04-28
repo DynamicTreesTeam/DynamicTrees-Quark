@@ -1,19 +1,26 @@
 {
   "family": "dtquark:azalea",
-  "leaves_properties": "dtquark:azalea",
   "tapering": 0.4,
   "up_probability": 2,
   "lowest_branch_height": 0,
   "signal_energy": 8.0,
   "growth_rate": 0.7,
   "soil_longevity": 2,
+  "leaves_properties": "dtquark:azalea",
   "generate_seed": true,
   "generate_sapling": true,
   "growth_logic_kit": "azalea",
-  "perfect_biomes": { "name": "minecraft:lush_caves" },
+  "preferred_climate" : "temperate",
+  "climate_tolerance": 0.4,
   "primitive_saplings": [
-    {"sapling_block": "minecraft:azalea", "replace_sapling_when_placed": false},
-    {"sapling_block": "minecraft:flowering_azalea", "replace_sapling_when_placed": false}
+    {
+      "sapling_block": "azalea",
+      "replace_sapling_when_placed": false
+    },
+    {
+      "sapling_block": "flowering_azalea",
+      "replace_sapling_when_placed": false
+    }
   ],
   "force_soil": "rooted_dirt",
   "acceptable_soils": ["dirt_like"],
@@ -28,7 +35,7 @@
     {
       "name": "alt_leaves",
       "properties": {
-        "alternative_leaves": "dtquark:flowering_azalea",
+        "alternative_leaves": "flowering_azalea",
         "place_chance": 0.35
       }
     },

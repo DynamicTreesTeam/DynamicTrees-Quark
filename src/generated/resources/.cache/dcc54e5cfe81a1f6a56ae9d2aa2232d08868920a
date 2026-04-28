@@ -1,7 +1,7 @@
-// 1.21.1	2026-04-28T14:48:09.125569533	dtquark DT Block Tags
+// 1.21.1	2026-04-28T16:09:09.088346861	dtquark DT Block Tags
 1ae719368e82a033b150af0219706387e6a8c857 data/dynamictrees/tags/block/branches_that_burn.json
 afb0f28958dd3275209b1efc132f48e3791fd70b data/dynamictrees/tags/block/fungus_branches.json
 89a67639f980b93af0c5021e5733b21877e7db65 data/dynamictrees/tags/block/fungus_caps.json
 c1156dda7de938e71d30bcb7357c5befba0d980c data/dynamictrees/tags/block/leaves.json
-4f6bae269a41e37f7f311b493a68d8096f43cb4c data/dynamictrees/tags/block/saplings.json
+816ff20001b518f929c0b281f11593f3a849ea91 data/dynamictrees/tags/block/saplings.json
 9ba14a376795df66c049874d9af5e7e6169f5113 data/dynamictrees/tags/block/stripped_branches_that_burn.json

@@ -1,9 +1,0 @@
-{
-  "_comment": "Strip Quark's native quark:glow_shrooms and quark:glow_shrooms_extras placed features from the quark:glimmering_weald biome. These are declared directly in quark's biome JSON (data/quark/worldgen/biome/glimmering_weald.json, VEGETAL_DECORATION stage) with feature type quark:glow_shrooms / quark:glow_shrooms_extras — a custom type that DT's feature_cancellers (which match 'type: tree' or 'dynamictrees:fungus') cannot recognise. This NeoForge biome_modifier removes them outright, leaving only dtquark:glow_shroom (placed via our DT species chain) to populate the biome, per user request that ONLY the DT glow_shroom tree appears in glimmering_weald.",
-  "type": "neoforge:remove_features",
-  "biomes": "quark:glimmering_weald",
-  "features": [
-    "quark:glow_shrooms",
-    "quark:glow_shrooms_extras"
-  ]
-}

@@ -1,5 +1,4 @@
 {
-  "_comment": "light_requirement:0 disables DynamicLeavesBlock.hasAdequateLight (default 13). Required for the azalea sapling to grow inside lush_caves where skylight is 0; vanilla azalea naturally grows in caves, and Nether trees use the same pattern. Empirically validated: without this field, bonemeal on dtquark:azalea_sapling fails inside the cave despite working at the surface.",
   "type": "scruffy",
   "primitive_leaves": "minecraft:azalea_leaves",
   "cell_kit": "dynamictrees:azalea",

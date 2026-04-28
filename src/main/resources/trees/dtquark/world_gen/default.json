@@ -1,20 +1,18 @@
 [
   {
-    "_comment": "Trumpet (Frosty) — #c:is_snowy. Weight = Quark's blue_blossom rarity.",
-    "select": { "tag" : "#c:is_snowy" },
+    "select": { "tag" : "#forge:is_snowy" },
     "apply": {
       "species" : {
         "method" : "splice_before",
         "random" : {
           "dtquark:frosty_blossom" : 1,
-          "..." : 200
+          "..." : 150
         }
       }
     }
   },
   {
-    "_comment": "Trumpet (Serene) — #c:is_swamp. Weight = Quark's lavender_blossom rarity.",
-    "select": { "tag" : "#c:is_swamp" },
+    "select": { "tag" : "#forge:is_swamp" },
     "apply": {
       "species" : {
         "method" : "splice_before",
@@ -26,7 +24,6 @@
     }
   },
   {
-    "_comment": "Trumpet (Warm) — #minecraft:is_savanna. Weight = Quark's orange_blossom rarity.",
     "select": { "tag" : "#minecraft:is_savanna" },
     "apply": {
       "species" : {
@@ -39,27 +36,25 @@
     }
   },
   {
-    "_comment": "Trumpet (Sunny) — #c:is_plains. Weight = Quark's yellow_blossom rarity.",
-    "select": { "tag" : "#c:is_plains" },
+    "select": { "tag" : "#forge:is_plains" },
     "apply": {
       "species" : {
         "method" : "splice_before",
         "random" : {
           "dtquark:sunny_blossom" : 1,
-          "..." : 200
+          "..." : 50
         }
       }
     }
   },
   {
-    "_comment": "Trumpet (Fiery) — #minecraft:is_badlands. Weight = Quark's red_blossom rarity.",
     "select": { "tag" : "#minecraft:is_badlands" },
     "apply": {
       "species" : {
         "method" : "splice_before",
         "random" : {
           "dtquark:fiery_blossom" : 1,
-          "..." : 30
+          "..." : 40
         }
       }
     }
@@ -76,350 +71,18 @@
   },
 
   {
-    "_comment": "Override cave_rooted in lush_caves with dtquark:azalea. WARNING: do NOT add generate_on_surface:false or a sibling species entry here — both break bonemeal on dtquark:azalea_sapling globally.",
-    "select": { "name": "minecraft:lush_caves" },
+    "_comment": "Generate azaleas above lush caves. We override this to generate them IN lush caves too",
+    "select": {
+      "name": "minecraft:lush_caves"
+    },
     "apply": {
+      "species" : "azalea",
+      "density": [ 2 ],
+      "chance": 0.8,
       "cave_rooted": {
-        "species": "dtquark:azalea",
+        "species": "azalea",
         "chance": 1.0
       }
-    }
-  },
-
-
-  {
-    "_comment": "Terralith name-based entries below. Tags don't reliably hit Terralith biomes; all guarded by only_if_loaded=terralith.",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:blooming_valley" },
-    "apply": {
-      "species": {
-        "method": "splice_before",
-        "random": {
-          "dtquark:azalea": 1,
-          "...": 1
-        }
-      }
-    }
-  },
-  {
-    "_comment": "Azalea in underground_jungle (co-spawns with dtterralith:azalea_bush).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:cave/underground_jungle" },
-    "apply": {
-      "species": {
-        "method": "splice_before",
-        "random": {
-          "dtquark:azalea": 1,
-          "...": 3
-        }
-      }
-    }
-  },
-  {
-    "_comment": "Azalea rare in snowy_cherry_grove.",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:snowy_cherry_grove" },
-    "apply": {
-      "species": {
-        "method": "splice_before",
-        "random": {
-          "dtquark:azalea": 1,
-          "...": 5
-        }
-      }
-    }
-  },
-  {
-    "_comment": "Terralith lush_valley: both azaleas alongside the DTTerralith spruce/birch_pine/larch mix.",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:lush_valley" },
-    "apply": {
-      "species": {
-        "method": "splice_before",
-        "random": {
-          "dtquark:azalea": 1,
-          "dtterralith:azalea_bush": 1,
-          "...": 4
-        }
-      }
-    }
-  },
-  {
-    "_comment": "Terralith lush_desert: both azaleas alongside DT+ cacti.",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:lush_desert" },
-    "apply": {
-      "species": {
-        "method": "splice_before",
-        "random": {
-          "dtquark:azalea": 1,
-          "dtterralith:azalea_bush": 1,
-          "...": 6
-        }
-      }
-    }
-  },
-
-  {
-    "_comment": "Frosty Blossom in Terralith snowy biomes (scaled ~1.21× of prior).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:wintry_forest" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 273 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:wintry_lowlands" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 273 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:snowy_maple_forest" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 218 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:snowy_shield" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 182 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:siberian_.*" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 182 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:frozen_cliffs" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 109 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:alpine_grove" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 145 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:alpine_highlands" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 145 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:skylands_winter" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 182 } }
-    }
-  },
-  {
-    "_comment": "Frosty rare in snowy_cherry_grove (already has dtquark:azalea entry above).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:snowy_cherry_grove" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:frosty_blossom": 1, "...": 218 } }
-    }
-  },
-
-  {
-    "_comment": "Serene Blossom in Terralith swampy/jungle biomes (scaled ~0.885× of prior).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:orchid_swamp" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:serene_blossom": 1, "...": 106 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:ice_marsh" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:serene_blossom": 1, "...": 106 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:moonlight_grove" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:serene_blossom": 1, "...": 133 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:moonlight_valley" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:serene_blossom": 1, "...": 133 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:amethyst_canyon" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:serene_blossom": 1, "...": 159 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:amethyst_rainforest" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:serene_blossom": 1, "...": 159 } }
-    }
-  },
-
-  {
-    "_comment": "Warm Blossom in Terralith savanna biomes (scaled ~0.885× of prior).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:savanna_badlands" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:warm_blossom": 1, "...": 100 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:savanna_slopes" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:warm_blossom": 1, "...": 100 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:fractured_savanna" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:warm_blossom": 1, "...": 106 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:ashen_savanna" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:warm_blossom": 1, "...": 106 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:arid_highlands" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:warm_blossom": 1, "...": 106 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:brushland" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:warm_blossom": 1, "...": 133 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:hot_shrubland" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:warm_blossom": 1, "...": 106 } }
-    }
-  },
-
-  {
-    "_comment": "Sunny Blossom in Terralith plains/flowery biomes (scaled ~6.67× of prior to match Quark's 1-in-200 in plains).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:blooming_valley" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:sunny_blossom": 1, "...": 400 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:blooming_plateau" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:sunny_blossom": 1, "...": 300 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:lavender_forest" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:sunny_blossom": 1, "...": 1000 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:lavender_valley" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:sunny_blossom": 1, "...": 1000 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:sakura_.*" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:sunny_blossom": 1, "...": 800 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:haze_mountain" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:sunny_blossom": 1, "...": 1000 } }
-    }
-  },
-
-  {
-    "_comment": "Fiery Blossom in Terralith badlands/desert biomes (scaled ~0.667× of prior).",
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:red_oasis" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:fiery_blossom": 1, "...": 40 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:desert_oasis" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:fiery_blossom": 1, "...": 40 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:desert_spires" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:fiery_blossom": 1, "...": 40 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:desert_canyon" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:fiery_blossom": 1, "...": 50 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:sandstone_valley" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:fiery_blossom": 1, "...": 50 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:bryce_canyon" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:fiery_blossom": 1, "...": 40 } }
-    }
-  },
-  {
-    "only_if_loaded": "terralith",
-    "select": { "name": "terralith:lush_desert" },
-    "apply": {
-      "species": { "method": "splice_before", "random": { "dtquark:fiery_blossom": 1, "...": 50 } }
     }
   }
 ]

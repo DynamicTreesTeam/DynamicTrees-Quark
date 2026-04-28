@@ -1,37 +1,11 @@
 [
   {
-    "_comment": "Cancel DT/DT+ fungus-style features in glimmering_weald so only our dtquark:glow_shroom populates (when DT+ is loaded).",
     "only_if_loaded": "dynamictreesplus",
     "select": { "name": "quark:glimmering_weald" },
     "cancellers": {
-      "type": "dynamictrees:fungus",
+      "type": "dtquark:mushroom",
       "namespaces": ["minecraft", "quark"],
       "stage": "UNDERGROUND_DECORATION"
-    }
-  },
-  {
-    "_comment": "Kill every vanilla/Quark tree feature (type=tree) across all biomes so DT species populators own placement.",
-    "select": { "name": ".*" },
-    "cancellers": {
-      "type": "tree",
-      "namespaces": ["minecraft", "quark"]
-    }
-  },
-  {
-    "_comment": "Kill vanilla rooted azalea (type=rooted_tree) in lush caves so only dtquark:azalea spawns via our cave_rooted override. Without this, vanilla's rooted azalea tree feature runs in parallel with DT's cave_rooted, producing mixed vanilla + DT azaleas.",
-    "select": { "name": "minecraft:lush_caves" },
-    "cancellers": {
-      "type": "rooted_tree",
-      "namespaces": ["minecraft"]
-    }
-  },
-  {
-    "_comment": "Cancel Terralith's native tree features across all terralith biomes as a fallback for setups without DTTerralith. DTTerralith's own cancellers already do this when it is loaded; duplicate cancellation is harmless.",
-    "only_if_loaded": "terralith",
-    "select": { "names": ["terralith:.*", "!terralith:alpha_islands.*"] },
-    "cancellers": {
-      "type": "tree",
-      "namespaces": ["minecraft", "terralith"]
     }
   }
 ]
