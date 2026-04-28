@@ -15,28 +15,28 @@ Compatibility Mod between Dynamic Trees and Quark for NeoForge 1.21.1
 
 [[dependencies.dtquark]]
     modId="neoforge"
-    mandatory=true
+    type="required"
     versionRange="[21.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dtquark]]
     modId="minecraft"
-    mandatory=true
+    type="required"
     versionRange="[1.21.1]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dtquark]]
     modId="dynamictrees"
-    mandatory=true
+    type="required"
     versionRange="[1.1.0,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.dtquark]]
     modId="quark"
-    mandatory=true
+    type="required"
     versionRange="[4.1,)"
     ordering="AFTER"
     side="BOTH"
@@ -45,7 +45,7 @@ Compatibility Mod between Dynamic Trees and Quark for NeoForge 1.21.1
 # species chains (e.g. glimmering_weald's glow_shroom) without being overwritten.
 [[dependencies.dtquark]]
     modId="dynamictreesplus"
-    mandatory=false
+    type="optional"
     versionRange="[1.3,)"
     ordering="AFTER"
     side="BOTH"
@@ -57,7 +57,7 @@ Compatibility Mod between Dynamic Trees and Quark for NeoForge 1.21.1
 # load order determines whether splice_before sees the prior chain or an empty one.
 [[dependencies.dtquark]]
     modId="dtterralith"
-    mandatory=false
+    type="optional"
     versionRange="[1.0,)"
     ordering="AFTER"
     side="BOTH"
@@ -66,7 +66,7 @@ Compatibility Mod between Dynamic Trees and Quark for NeoForge 1.21.1
 # is registered before ours.
 [[dependencies.dtquark]]
     modId="terralith"
-    mandatory=false
+    type="optional"
     versionRange="[2.0,)"
     ordering="AFTER"
     side="BOTH"
