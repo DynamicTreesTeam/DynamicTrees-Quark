@@ -2,80 +2,72 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "block_pool",
-      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "quark:ancient_leaves"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:any_of",
-          "terms": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "items": [
-                  "minecraft:shears"
-                ]
-              }
-            },
-            {
-              "condition": "minecraft:match_tool",
-              "predicate": {
-                "predicates": {
-                  "minecraft:enchantments": [
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:any_of",
+                  "terms": [
                     {
-                      "enchantments": "minecraft:silk_touch",
-                      "levels": {
-                        "min": 1
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "items": "minecraft:shears"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "predicates": {
+                          "minecraft:enchantments": [
+                            {
+                              "enchantments": "minecraft:silk_touch",
+                              "levels": {
+                                "min": 1
+                              }
+                            }
+                          ]
+                        }
                       }
                     }
                   ]
                 }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "stick_pool",
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:stick",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "type": "minecraft:uniform",
-                "min": 1.0,
-                "max": 2.0
-              },
-              "add": false
+              ],
+              "name": "quark:ancient_leaves"
             },
             {
-              "function": "minecraft:explosion_decay"
+              "type": "dynamictrees:seed_item",
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                },
+                {
+                  "chances": [
+                    0.015625,
+                    0.03125,
+                    0.046875,
+                    0.0625
+                  ],
+                  "condition": "minecraft:table_bonus",
+                  "enchantment": "minecraft:fortune"
+                },
+                {
+                  "condition": "dynamictrees:seasonal_seed_drop_chance"
+                }
+              ]
             }
           ]
         }
       ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
       "conditions": [
-        {
-          "condition": "minecraft:table_bonus",
-          "enchantment": "minecraft:fortune",
-          "chances": [
-            0.02,
-            0.022222223,
-            0.025,
-            0.033333335,
-            0.1
-          ]
-        },
         {
           "condition": "minecraft:inverted",
           "term": {
@@ -84,7 +76,7 @@
               {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                    "items": ["minecraft:shears"]
+                  "items": "minecraft:shears"
                 }
               },
               {
@@ -94,7 +86,9 @@
                     "minecraft:enchantments": [
                       {
                         "enchantments": "minecraft:silk_touch",
-                        "levels": { "min": 1 }
+                        "levels": {
+                          "min": 1
+                        }
                       }
                     ]
                   }
@@ -103,81 +97,41 @@
             ]
           }
         }
-      ]
-    },
-    {
-      "name": "fruit_pool",
-      "rolls": 1.0,
+      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "quark:ancient_fruit",
           "conditions": [
-             {
-               "condition": "minecraft:table_bonus",
-               "enchantment": "minecraft:fortune",
-               "chances": [
-                 0.015,
-                 0.03,
-                 0.045,
-                 0.06
-               ]
-             }
+            {
+              "chances": [
+                0.02,
+                0.022222223,
+                0.025,
+                0.033333335,
+                0.1
+              ],
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune"
+            }
           ],
           "functions": [
-            { "function": "minecraft:explosion_decay" }
-          ]
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:any_of",
-            "terms": [
-              { "condition": "minecraft:match_tool", "predicate": { "items": ["minecraft:shears"] } },
-              { "condition": "minecraft:match_tool", "predicate": { "predicates": { "minecraft:enchantments": [ { "enchantments": "minecraft:silk_touch", "levels": { "min": 1 } } ] } } }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "seed_pool",
-      "rolls": 1.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "dtquark:ancient_seed",
-          "conditions": [
-             {
-               "condition": "minecraft:table_bonus",
-               "enchantment": "minecraft:fortune",
-               "chances": [
-                 0.10,
-                 0.12,
-                 0.15,
-                 0.20
-               ]
-             }
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
           ],
-          "functions": [
-            { "function": "minecraft:explosion_decay" }
-          ]
+          "name": "minecraft:stick"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:any_of",
-            "terms": [
-              { "condition": "minecraft:match_tool", "predicate": { "items": ["minecraft:shears"] } },
-              { "condition": "minecraft:match_tool", "predicate": { "predicates": { "minecraft:enchantments": [ { "enchantments": "minecraft:silk_touch", "levels": { "min": 1 } } ] } } }
-            ]
-          }
-        }
-      ]
+      "rolls": 1.0
     }
   ],
   "random_sequence": "dtquark:blocks/ancient_leaves"

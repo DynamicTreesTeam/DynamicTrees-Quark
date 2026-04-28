@@ -16,9 +16,7 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                        "items": [
-                          "minecraft:shears"
-                        ]
+                        "items": "minecraft:shears"
                       }
                     },
                     {
@@ -42,23 +40,25 @@
               "name": "minecraft:azalea_leaves"
             },
             {
-              "type": "minecraft:item",
+              "type": "dynamictrees:seed_item",
               "conditions": [
                 {
                   "condition": "minecraft:survives_explosion"
                 },
                 {
                   "chances": [
-                    0.05,
-                    0.0625,
-                    0.083333336,
-                    0.1
+                    0.015625,
+                    0.03125,
+                    0.046875,
+                    0.0625
                   ],
                   "condition": "minecraft:table_bonus",
                   "enchantment": "minecraft:fortune"
+                },
+                {
+                  "condition": "dynamictrees:seasonal_seed_drop_chance"
                 }
-              ],
-              "name": "minecraft:azalea"
+              ]
             }
           ]
         }
@@ -76,22 +76,22 @@
               {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "items": [
-                    "minecraft:shears"
-                  ]
+                  "items": "minecraft:shears"
                 }
               },
               {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": {
-                        "min": 1
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
                       }
-                    }
-                  ]
+                    ]
+                  }
                 }
               }
             ]
@@ -133,5 +133,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "dtquark:blocks/azalea_leaves"
 }

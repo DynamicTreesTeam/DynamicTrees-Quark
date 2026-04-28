@@ -2,43 +2,20 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "seed_pool",
-      "rolls": 1.0,
       "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dtquark:ancient_seed",
           "conditions": [
             {
-              "condition": "minecraft:random_chance",
-              "chance": 0.40
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "fruit_pool",
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "quark:ancient_fruit",
-          "functions": [
-            {
-              "function": "minecraft:explosion_decay"
+              "condition": "dynamictrees:voluntary_seed_drop_chance",
+              "rarity": 1.0
             }
           ],
-          "conditions": [
-            {
-              "condition": "minecraft:random_chance",
-              "chance": 0.25
-            }
-          ]
+          "name": "dtquark:ancient_seed"
         }
-      ]
+      ],
+      "rolls": 1.0
     }
   ],
   "random_sequence": "dtquark:trees/voluntary/ancient"

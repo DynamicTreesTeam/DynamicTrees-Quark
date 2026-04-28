@@ -2,14 +2,13 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:alternatives",
           "children": [
             {
               "type": "minecraft:item",
-              "name": "quark:glow_shroom_block",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -26,28 +25,38 @@
                     }
                   }
                 }
-              ]
+              ],
+              "name": "quark:glow_shroom_block"
             },
             {
               "type": "minecraft:item",
-              "name": "dtquark:glow_shroom_seed",
               "functions": [
                 {
-                  "function": "minecraft:set_count",
+                  "add": false,
                   "count": {
                     "type": "minecraft:uniform",
-                    "min": 0.0,
-                    "max": 2.0
+                    "max": 2.0,
+                    "min": -6.0
+                  },
+                  "function": "minecraft:set_count"
+                },
+                {
+                  "function": "minecraft:limit_count",
+                  "limit": {
+                    "min": 0.0
                   }
                 },
                 {
                   "function": "minecraft:explosion_decay"
                 }
-              ]
+              ],
+              "name": "quark:glow_shroom"
             }
           ]
         }
-      ]
+      ],
+      "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "dtquark:blocks/glow_shroom_cap"
 }

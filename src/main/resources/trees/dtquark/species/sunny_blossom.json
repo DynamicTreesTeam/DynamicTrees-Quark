@@ -15,5 +15,9 @@
   "primitive_sapling": "quark:yellow_blossom_sapling",
   "features" : [
     "bee_nest"
-  ]
+  ],
+  "lang_overrides": {
+    "species": "Sunny",
+    "seed": "Sunny Blossom Pit"
+  }
 }

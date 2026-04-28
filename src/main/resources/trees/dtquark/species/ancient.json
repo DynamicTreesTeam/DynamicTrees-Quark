@@ -32,5 +32,9 @@
         "fruit": "dtquark:ancient_fruit"
       }
     }
-  ]
+  ],
+  "lang_overrides": {
+    "species": "Ashen",
+    "seed": "Ashen Seeds"
+  }
 }

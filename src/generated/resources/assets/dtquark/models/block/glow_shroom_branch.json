@@ -2,6 +2,6 @@
   "loader": "dynamictrees:branch",
   "textures": {
     "bark": "quark:block/glow_shroom_stem",
-    "rings": "quark:block/glow_shroom_stem"
+    "rings": "quark:block/glow_shroom_block_inside"
   }
 }

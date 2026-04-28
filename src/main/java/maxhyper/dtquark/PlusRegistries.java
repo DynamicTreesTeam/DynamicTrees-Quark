@@ -1,9 +1,14 @@
 package maxhyper.dtquark;
 
+import com.dtteam.dynamictrees.block.fruit.Fruit;
+import com.dtteam.dynamictrees.block.leaves.LeavesProperties;
+import com.dtteam.dynamictrees.block.soil.SoilProperties;
+import com.dtteam.dynamictrees.data.GatherDataHelper;
 import com.dtteam.dynamictrees.event.RegistryEvent;
 import com.dtteam.dynamictrees.event.TypeRegistryEvent;
 import com.dtteam.dynamictrees.api.worldgen.BiomePropertySelectors;
 import com.dtteam.dynamictrees.api.worldgen.FeatureCanceller;
+import com.dtteam.dynamictrees.tree.family.Family;
 import com.dtteam.dynamictrees.tree.species.Species;
 import com.dtteam.dynamictrees.worldgen.featurecancellation.MushroomFeatureCanceller;
 import com.dtteam.dynamictreesplus.block.mushroom.CapProperties;
@@ -13,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 public class PlusRegistries {
 
@@ -47,5 +53,16 @@ public class PlusRegistries {
             event.registerType(DynamicTreesQuark.location("glow_shroom"), GlowShroomSpecies.TYPE);
         }
     }
+
+    public static void gatherAllData(GatherDataEvent event) {
+        GatherDataHelper.gatherAllData(DynamicTreesQuark.MOD_ID, event,
+                SoilProperties.REGISTRY,
+                Family.REGISTRY,
+                Species.REGISTRY,
+                Fruit.REGISTRY,
+                LeavesProperties.REGISTRY,
+                CapProperties.REGISTRY);
+    }
+
 
 }

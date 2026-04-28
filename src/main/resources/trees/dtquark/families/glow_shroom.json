@@ -9,5 +9,8 @@
   "texture_overrides": {
     "branch": "quark:block/glow_shroom_stem",
     "branch_top": "quark:block/glow_shroom_block_inside"
+  },
+  "lang_overrides": {
+    "branch": "Glow Shroom"
   }
 }
