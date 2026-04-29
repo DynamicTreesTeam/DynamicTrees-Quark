@@ -1,6 +1,6 @@
 [
   {
-    "select": { "tag" : "#forge:is_snowy" },
+    "select": { "tag" : "#c:is_snowy" },
     "apply": {
       "species" : {
         "method" : "splice_before",
@@ -12,7 +12,7 @@
     }
   },
   {
-    "select": { "tag" : "#forge:is_swamp" },
+    "select": { "tag" : "#c:is_swamp" },
     "apply": {
       "species" : {
         "method" : "splice_before",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "select": { "tag" : "#forge:is_plains" },
+    "select": { "tag" : "#c:is_plains" },
     "apply": {
       "species" : {
         "method" : "splice_before",
