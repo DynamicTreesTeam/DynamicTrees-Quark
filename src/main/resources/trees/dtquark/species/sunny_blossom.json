@@ -9,9 +9,8 @@
   "always_show_on_waila": true,
   "generate_seed": true,
   "generate_sapling": true,
-  "world_gen_acceptable_soils": ["sand_like", "snow_like"],
   "preferred_climate": "tropical",
-  "perfect_biomes": { "types": [ "forest", "overworld" ] },
+  "climate_tolerance": 0.5,
   "primitive_sapling": "quark:yellow_blossom_sapling",
   "features" : [
     "bee_nest"

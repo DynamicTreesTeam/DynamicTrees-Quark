@@ -3,12 +3,5 @@
   "common_leaves": "dtquark:frosty_blossom",
   "primitive_log": "quark:blossom_log",
   "primitive_stripped_log": "quark:stripped_blossom_log",
-  "stick": "stick",
-  "max_branch_radius": 8,
-  "texture_overrides": {
-    "branch": "quark:block/blossom_log",
-    "branch_top": "quark:block/blossom_log_top",
-    "stripped_branch": "quark:block/stripped_blossom_log",
-    "stripped_branch_top": "quark:block/stripped_blossom_log_top"
-  }
+  "max_branch_radius": 8
 }

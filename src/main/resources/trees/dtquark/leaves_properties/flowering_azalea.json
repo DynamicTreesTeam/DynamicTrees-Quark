@@ -1,5 +1,4 @@
 {
-  "_comment": "light_requirement:0 disables DynamicLeavesBlock.hasAdequateLight (default 13). Required because dtquark:azalea species declares this as its alt_leaves (35% place_chance) — without matching the base leaves' setting, the flowering variant would still decay/refuse to grow at skylight 0 inside lush_caves, leaving holes or damaged canopy on cave-grown azaleas. Mirrors the fix applied to azalea.json.",
   "type": "scruffy",
   "primitive_leaves": "minecraft:flowering_azalea_leaves",
   "cell_kit": "dynamictrees:azalea",
