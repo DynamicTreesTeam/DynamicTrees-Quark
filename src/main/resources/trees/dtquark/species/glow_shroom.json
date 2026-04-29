@@ -29,7 +29,8 @@
   },
   "primitive_sapling": "quark:glow_shroom",
   "sapling_shape": "dtquark:round_short_mushroom",
-  "acceptable_soils": ["fungus_like"],
-  "features" : [
-  ]
+  "acceptable_soils": ["fungus_like", "stone_like"],
+  "lang_overrides": {
+    "seed": "Glow Shroom Cap"
+  }
 }

@@ -1,15 +1,15 @@
 package maxhyper.dtquark.cell;
 
-import com.ferreusveritas.dynamictrees.api.cell.Cell;
-import com.ferreusveritas.dynamictrees.api.cell.CellKit;
-import com.ferreusveritas.dynamictrees.api.cell.CellNull;
-import com.ferreusveritas.dynamictrees.api.cell.CellSolver;
-import com.ferreusveritas.dynamictrees.api.registry.Registry;
-import com.ferreusveritas.dynamictrees.cell.CellKits;
-import com.ferreusveritas.dynamictrees.cell.ConiferBranchCell;
-import com.ferreusveritas.dynamictrees.cell.ConiferTopBranchCell;
-import com.ferreusveritas.dynamictrees.cell.MetadataCell;
-import com.ferreusveritas.dynamictrees.util.SimpleVoxmap;
+import com.dtteam.dynamictrees.api.cell.Cell;
+import com.dtteam.dynamictrees.api.cell.CellKit;
+import com.dtteam.dynamictrees.api.cell.CellNull;
+import com.dtteam.dynamictrees.api.cell.CellSolver;
+import com.dtteam.dynamictrees.api.registry.Registry;
+import com.dtteam.dynamictrees.systems.cell.CellKits;
+import com.dtteam.dynamictrees.systems.cell.ConiferBranchCell;
+import com.dtteam.dynamictrees.systems.cell.ConiferTopBranchCell;
+import com.dtteam.dynamictrees.systems.cell.MetadataCell;
+import com.dtteam.dynamictrees.api.voxmap.SimpleVoxmap;
 import maxhyper.dtquark.DynamicTreesQuark;
 
 public class DTQuarkCellKits {
@@ -30,7 +30,7 @@ public class DTQuarkCellKits {
                 new AncientLeafCell(7)
         };
 
-        private final CellKits.BasicSolver solver = new com.ferreusveritas.dynamictrees.cell.CellKits.BasicSolver(new short[]{0x0514, 0x0413, 0x0312, 0x0211});
+        private final CellKits.BasicSolver solver = new com.dtteam.dynamictrees.systems.cell.CellKits.BasicSolver(new short[]{0x0514, 0x0413, 0x0312, 0x0211});
 
         @Override
         public Cell getCellForLeaves(int hydro) {

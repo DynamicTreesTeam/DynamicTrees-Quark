@@ -7,9 +7,12 @@
   "growth_rate": 0.5,
   "soil_longevity": 8,
   "world_gen_leaf_map_height": 40,
+  "generate_seed": true,
+  "generate_sapling": true,
   "growth_logic_kit": "dtquark:ancient",
   "leaves_properties": "dtquark:ancient",
-  "perfect_biomes": { "tag": "#forge:is_magical" },
+  "perfect_biomes": { "tag": "#c:is_rare" },
+  "drop_creators": [ "log", "voluntary", "harvest" ],
   "primitive_saplings": [
     { "sapling_block": "quark:ancient_sapling" },
     {
@@ -17,7 +20,7 @@
       "can_craft_seed_to_sapling": false
     }
   ],
-  "seasonal_fruiting_offset": null,
+
   "inherit_fruiting_offset_to_fruits": true,
   "fruits": [
     "dtquark:ancient_fruit"
@@ -29,5 +32,9 @@
         "fruit": "dtquark:ancient_fruit"
       }
     }
-  ]
+  ],
+  "lang_overrides": {
+    "species": "Ashen",
+    "seed": "Ashen Seeds"
+  }
 }

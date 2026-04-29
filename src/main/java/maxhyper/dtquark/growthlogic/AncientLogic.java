@@ -1,13 +1,13 @@
 package maxhyper.dtquark.growthlogic;
 
-import com.ferreusveritas.dynamictrees.api.configuration.ConfigurationProperty;
-import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKit;
-import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKitConfiguration;
-import com.ferreusveritas.dynamictrees.growthlogic.context.DirectionManipulationContext;
-import com.ferreusveritas.dynamictrees.growthlogic.context.DirectionSelectionContext;
-import com.ferreusveritas.dynamictrees.growthlogic.context.PositionalSpeciesContext;
-import com.ferreusveritas.dynamictrees.systems.GrowSignal;
-import com.ferreusveritas.dynamictrees.util.CoordUtils;
+import com.dtteam.dynamictrees.api.configuration.ConfigurationProperty;
+import com.dtteam.dynamictrees.systems.growthlogic.GrowthLogicKit;
+import com.dtteam.dynamictrees.systems.growthlogic.GrowthLogicKitConfiguration;
+import com.dtteam.dynamictrees.systems.growthlogic.context.DirectionManipulationContext;
+import com.dtteam.dynamictrees.systems.growthlogic.context.DirectionSelectionContext;
+import com.dtteam.dynamictrees.systems.growthlogic.context.PositionalSpeciesContext;
+import com.dtteam.dynamictrees.systems.GrowSignal;
+import com.dtteam.dynamictrees.utility.CoordUtils;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 
@@ -34,7 +34,7 @@ public class AncientLogic extends GrowthLogicKit {
 
     @Override
     protected void registerProperties() {
-        register(MIN_BRANCH_GAP, MAX_BRANCH_GAP, BRANCH_HEIGHT_VARIATION, HEIGHT_VARIATION, SIDE_BRANCH_ENERGY);
+        register(MIN_BRANCH_GAP, MAX_BRANCH_GAP, BRANCH_HEIGHT_VARIATION, GrowthLogicKit.HEIGHT_VARIATION, SIDE_BRANCH_ENERGY);
     }
 
     @Override
@@ -99,6 +99,6 @@ public class AncientLogic extends GrowthLogicKit {
         long day = context.level().getGameTime() / 24000L;
         int month = (int) day / 30;//Change the hashs every in-game month
 
-        return  (CoordUtils.coordHashCode(context.pos().above(month), 2) % configuration.get(HEIGHT_VARIATION));
+        return  (CoordUtils.coordHashCode(context.pos().above(month), 2) % configuration.get(GrowthLogicKit.HEIGHT_VARIATION));
     }
 }

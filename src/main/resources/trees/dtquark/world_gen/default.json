@@ -42,7 +42,7 @@
         "method" : "splice_before",
         "random" : {
           "dtquark:sunny_blossom" : 1,
-          "..." : 25
+          "..." : 50
         }
       }
     }
@@ -67,6 +67,22 @@
       "species" : "dtquark:glow_shroom",
       "density": [ 2 ],
       "chance": 0.8
+    }
+  },
+
+  {
+    "_comment": "Generate azaleas above lush caves. We override this to generate them IN lush caves too",
+    "select": {
+      "name": "minecraft:lush_caves"
+    },
+    "apply": {
+      "species" : "azalea",
+      "density": [ 2 ],
+      "chance": 0.8,
+      "cave_rooted": {
+        "species": "azalea",
+        "chance": 1.0
+      }
     }
   }
 ]

@@ -1,7 +1,0 @@
-{
-  "loader": "dynamictrees:branch",
-  "textures": {
-    "bark": "quark:block/stripped_blossom_log",
-    "rings": "quark:block/stripped_blossom_log_top"
-  }
-}

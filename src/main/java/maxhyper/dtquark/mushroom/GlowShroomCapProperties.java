@@ -1,7 +1,7 @@
 package maxhyper.dtquark.mushroom;
 
-import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
-import com.ferreusveritas.dynamictreesplus.block.mushroom.CapProperties;
+import com.dtteam.dynamictrees.api.registry.TypedRegistry;
+import com.dtteam.dynamictreesplus.block.mushroom.CapProperties;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -28,11 +28,11 @@ public class GlowShroomCapProperties extends CapProperties {
     }
 
     public Vec3 sporeParticleSpeed(BlockState state, Level level, BlockPos pos, RandomSource random) {
-        return new Vec3(0, -0.05 - Math.random() * 0.05, 0);
+        return new Vec3(0, -0.05 - random.nextDouble() * 0.05, 0);
     }
 
     @Override
-    public BlockBehaviour.Properties getDefaultBlockProperties(MapColor mapColor) {
-        return super.getDefaultBlockProperties(mapColor).emissiveRendering((a,b,c)->true).hasPostProcess((a,b,c)->true);
+    public BlockBehaviour.Properties getDefaultBlockProperties() {
+        return super.getDefaultBlockProperties().emissiveRendering((a,b,c)->true).hasPostProcess((a,b,c)->true);
     }
 }

@@ -1,12 +1,12 @@
 package maxhyper.dtquark.mushroom;
 
-import com.ferreusveritas.dynamictrees.api.registry.RegistryHandler;
-import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
-import com.ferreusveritas.dynamictrees.block.DynamicSaplingBlock;
-import com.ferreusveritas.dynamictrees.tree.family.Family;
-import com.ferreusveritas.dynamictrees.tree.species.Species;
-import com.ferreusveritas.dynamictreesplus.block.mushroom.CapProperties;
-import com.ferreusveritas.dynamictreesplus.tree.HugeMushroomSpecies;
+import com.dtteam.dynamictrees.api.registry.RegistryHandler;
+import com.dtteam.dynamictrees.api.registry.TypedRegistry;
+import com.dtteam.dynamictrees.block.sapling.DynamicSaplingBlock;
+import com.dtteam.dynamictrees.tree.family.Family;
+import com.dtteam.dynamictrees.tree.species.Species;
+import com.dtteam.dynamictreesplus.block.mushroom.CapProperties;
+import com.dtteam.dynamictreesplus.tree.HugeMushroomSpecies;
 import maxhyper.dtquark.DynamicTreesQuark;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -36,7 +36,7 @@ public class GlowShroomSpecies extends HugeMushroomSpecies {
                     public void animateTick(@NotNull BlockState stateIn, @NotNull Level worldIn, @NotNull BlockPos pos, @NotNull RandomSource rand) {
                         super.animateTick(stateIn, worldIn, pos, rand);
                         if (rand.nextInt(12) == 0 && worldIn.getBlockState(pos.above()).isAir()) {
-                            worldIn.addParticle(ParticleTypes.END_ROD, (double)pos.getX() + 0.4 + rand.nextDouble() * 0.2, (double)pos.getY() + 0.5 + rand.nextDouble() * 0.1, (double)pos.getZ() + 0.4 + rand.nextDouble() * 0.2, (Math.random() - 0.5) * 0.04, (1.0 + Math.random()) * 0.02, (Math.random() - 0.5) * 0.04);
+                            worldIn.addParticle(ParticleTypes.END_ROD, (double)pos.getX() + 0.4 + rand.nextDouble() * 0.2, (double)pos.getY() + 0.5 + rand.nextDouble() * 0.1, (double)pos.getZ() + 0.4 + rand.nextDouble() * 0.2, (rand.nextDouble() - 0.5) * 0.04, (1.0 + rand.nextDouble()) * 0.02, (rand.nextDouble() - 0.5) * 0.04);
                         }
                     }
                 }));

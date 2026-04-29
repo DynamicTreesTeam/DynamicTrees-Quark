@@ -4,5 +4,11 @@
   "primitive_log": "quark:ancient_log",
   "primitive_stripped_log": "quark:stripped_ancient_log",
   "max_branch_radius": 8,
-  "max_signal_depth": 40
+  "max_signal_depth": 40,
+  "texture_overrides": {
+    "branch": "quark:block/ancient_log",
+    "branch_top": "quark:block/ancient_log_top",
+    "stripped_branch": "quark:block/stripped_ancient_log",
+    "stripped_branch_top": "quark:block/stripped_ancient_log_top"
+  }
 }

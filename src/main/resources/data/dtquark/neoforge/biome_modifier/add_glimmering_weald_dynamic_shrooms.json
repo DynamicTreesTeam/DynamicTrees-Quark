@@ -1,0 +1,12 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "dynamictreesplus"
+    }
+  ],
+  "type": "neoforge:add_features",
+  "biomes": "quark:glimmering_weald",
+  "features": "dtquark:dynamic_glow_shrooms",
+  "step": "underground_decoration"
+}

@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "dynamictreesplus"
+    }
+  ],
   "feature": "dtquark:patch_dynamic_glow_shroom",
   "placement": [
     {

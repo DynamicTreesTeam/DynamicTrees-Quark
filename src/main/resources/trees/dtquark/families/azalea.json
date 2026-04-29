@@ -1,8 +1,14 @@
 {
-  "common_leaves": "azalea",
-  "common_species": "azalea",
+  "common_leaves": "dtquark:azalea",
+  "common_species": "dtquark:azalea",
   "primitive_log": "quark:azalea_log",
   "primitive_stripped_log": "quark:stripped_azalea_log",
   "max_branch_radius": 8,
-  "loot_volume_multiplier": 2.5
+  "loot_volume_multiplier": 2.5,
+  "texture_overrides": {
+    "branch": "quark:block/azalea_log",
+    "branch_top": "quark:block/azalea_log_top",
+    "stripped_branch": "quark:block/stripped_azalea_log",
+    "stripped_branch_top": "quark:block/stripped_azalea_log_top"
+  }
 }

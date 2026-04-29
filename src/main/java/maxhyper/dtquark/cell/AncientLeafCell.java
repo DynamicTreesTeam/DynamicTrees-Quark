@@ -1,7 +1,7 @@
 package maxhyper.dtquark.cell;
 
-import com.ferreusveritas.dynamictrees.cell.MatrixCell;
-import com.ferreusveritas.dynamictrees.util.SimpleVoxmap;
+import com.dtteam.dynamictrees.systems.cell.MatrixCell;
+import com.dtteam.dynamictrees.api.voxmap.SimpleVoxmap;
 import net.minecraft.core.BlockPos;
 
 public class AncientLeafCell extends MatrixCell {

@@ -1,7 +1,7 @@
 package maxhyper.dtquark.loot;
 
 import com.google.common.base.Suppliers;
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.resources.ResourceLocation;
@@ -9,18 +9,18 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.common.loot.IGlobalLootModifier;
-import net.minecraftforge.common.loot.LootModifier;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
+import net.neoforged.neoforge.common.loot.LootModifier;
+import net.minecraft.core.registries.BuiltInRegistries;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
 public class ReplaceItemModifier extends LootModifier {
-    public static final Supplier<Codec<ReplaceItemModifier>> CODEC = Suppliers.memoize(()
-            -> RecordCodecBuilder.create(inst -> codecStart(inst)
-            .and(ForgeRegistries.ITEMS.getCodec().fieldOf("old_item").forGetter(m -> m.old_item))
-            .and(ForgeRegistries.ITEMS.getCodec().fieldOf("new_item").forGetter(m -> m.new_item))
+    public static final Supplier<MapCodec<ReplaceItemModifier>> CODEC = Suppliers.memoize(()
+            -> RecordCodecBuilder.mapCodec(inst -> codecStart(inst)
+            .and(BuiltInRegistries.ITEM.byNameCodec().fieldOf("old_item").forGetter(m -> m.old_item))
+            .and(BuiltInRegistries.ITEM.byNameCodec().fieldOf("new_item").forGetter(m -> m.new_item))
                 .apply(inst, ReplaceItemModifier::new)));
     private final Item old_item;
     private final Item new_item;
@@ -38,7 +38,7 @@ public class ReplaceItemModifier extends LootModifier {
     }
 
     @Override
-    public Codec<? extends IGlobalLootModifier> codec() {
+    public MapCodec<? extends IGlobalLootModifier> codec() {
         return CODEC.get();
     }
 }

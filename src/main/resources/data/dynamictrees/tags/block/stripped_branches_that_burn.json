@@ -1,0 +1,9 @@
+{
+  "_comment": "Adds dtquark stripped wood branches to DT's stripped_branches_that_burn tag. Mirror of branches_that_burn.json for stripped variants — DT base defines `dynamictrees:stripped_branches = [#stripped_branches_that_burn, #stripped_fungus_branches]`, so the same circular-reference rule applies: never reference #dynamictrees:stripped_branches from this file.",
+  "replace": false,
+  "values": [
+    "dtquark:stripped_ancient_branch",
+    "dtquark:stripped_azalea_branch",
+    "dtquark:stripped_blossom_branch"
+  ]
+}
