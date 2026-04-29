@@ -20,10 +20,19 @@
     },
     {
       "apply": {
-        "model": "quark:block/glow_shroom_block_inside"
+        "model": "quark:block/glow_shroom_block_inside",
+        "x": 90
       },
       "when": {
         "age": "1|2|3|4|5|6|7|8"
+      }
+    },
+    {
+      "apply": {
+        "model": "quark:block/glow_shroom_block_inside"
+      },
+      "when": {
+        "age": "2|3|4|5|6|7|8"
       }
     },
     {
@@ -32,7 +41,7 @@
         "y": 90
       },
       "when": {
-        "age": "1|2|3|4|5|6|7|8"
+        "age": "2|3|4|5|6|7|8"
       }
     },
     {
@@ -41,7 +50,7 @@
         "y": 180
       },
       "when": {
-        "age": "1|2|3|4|5|6|7|8"
+        "age": "2|3|4|5|6|7|8"
       }
     },
     {
@@ -50,16 +59,42 @@
         "y": 270
       },
       "when": {
-        "age": "1|2|3|4|5|6|7|8"
+        "age": "2|3|4|5|6|7|8"
       }
     },
     {
       "apply": {
-        "model": "quark:block/glow_shroom_block_inside",
-        "x": 90
+        "model": "quark:block/glow_shroom_block_side"
       },
       "when": {
-        "age": "1|2|3|4|5|6|7|8"
+        "age": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "quark:block/glow_shroom_block_side",
+        "y": 90
+      },
+      "when": {
+        "age": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "quark:block/glow_shroom_block_side",
+        "y": 180
+      },
+      "when": {
+        "age": "1"
+      }
+    },
+    {
+      "apply": {
+        "model": "quark:block/glow_shroom_block_side",
+        "y": 270
+      },
+      "when": {
+        "age": "1"
       }
     }
   ]
