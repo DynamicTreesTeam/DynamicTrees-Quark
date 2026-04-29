@@ -1,0 +1,7 @@
+{
+  "loader": "dynamictrees:branch",
+  "textures": {
+    "bark": "quark:block/azalea_log",
+    "rings": "quark:block/azalea_log_top"
+  }
+}

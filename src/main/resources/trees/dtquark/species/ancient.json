@@ -12,7 +12,6 @@
   "growth_logic_kit": "dtquark:ancient",
   "leaves_properties": "dtquark:ancient",
   "perfect_biomes": { "tag": "#c:is_rare" },
-  "drop_creators": [ "log", "voluntary", "harvest" ],
   "primitive_saplings": [
     { "sapling_block": "quark:ancient_sapling" },
     {
@@ -20,7 +19,6 @@
       "can_craft_seed_to_sapling": false
     }
   ],
-
   "inherit_fruiting_offset_to_fruits": true,
   "fruits": [
     "dtquark:ancient_fruit"
