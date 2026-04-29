@@ -38,9 +38,6 @@ public class DynamicTreesQuark {
 
         NeoForgeRegistryHandler.setup(MOD_ID, modEventBus);
         DTQuarkRegistries.setup();
-
-        // Server config + moss_vegetation override listener.
-        container.registerConfig(ModConfig.Type.SERVER, DTQuarkConfig.SERVER_SPEC);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
