@@ -1,9 +1,0 @@
-{
-  "_comment": "1.20-style duplicate of tags/block/branches_that_burn.json. NeoForge 1.21 reads tags/block/ (singular) and ignores tags/blocks/, but the file is kept as a paranoia fallback. Same circular-reference fix applies — never put #dynamictrees:branches or #dynamictrees:stripped_branches here.",
-  "replace": false,
-  "values": [
-    "dtquark:ancient_branch",
-    "dtquark:azalea_branch",
-    "dtquark:blossom_branch"
-  ]
-}

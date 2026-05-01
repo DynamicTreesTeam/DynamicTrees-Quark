@@ -1,9 +1,0 @@
-{
-  "_comment": "Adds dtquark wood branches to DT's branches_that_burn tag. NEVER reference #dynamictrees:branches here — DT base defines `dynamictrees:branches = [#branches_that_burn, #fungus_branches]`, so a back-reference creates `branches → branches_that_burn → branches` and TagLoader.build() bails on the cycle, emptying both tags. That breaks the transitive chain `minecraft:mineable/axe → #minecraft:logs → #dynamictrees:branches` GLOBALLY (DT base + DTTerralith + DTQuark), making axes mine all DT trees at hand-speed. Stripped variants belong in stripped_branches_that_burn.json, not here.",
-  "replace": false,
-  "values": [
-    "dtquark:ancient_branch",
-    "dtquark:azalea_branch",
-    "dtquark:blossom_branch"
-  ]
-}
